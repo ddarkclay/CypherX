@@ -1,0 +1,48 @@
+{% extends 'intro/basic.html' %}
+{% block title %} Database name {% endblock %}
+{% block body %}
+{% load static %}
+<!-- content page -->
+<section class="bgwhite p-t-66 p-b-38">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 p-b-30">
+                <div class="hov-img-zoom">
+                    <img src="{%static 'intro/images/banner-14.jpg' %}" alt="IMG-ABOUT">
+                </div>
+            </div>
+            <div class="col-md-8 p-b-30">
+                <h3 class="m-text26 p-t-15 p-b-16">
+                    Programming Name
+                </h3>
+                <p class="p-b-28">
+                    About intro Festo – India’s Ultimate Online introping Site intro Festo’s vision is to create India’s most reliable and frictionless commerce ecosystem that creates life-changing experiences for buyers and sellers. In February 2010, Kunal Bahl along with Rohit Bansal, started intro Festo.com - India’s largest online introping marketplace, with the widest assortment of 35 million plus products across 800 plus diverse categories from over 125,000 regional, national, and international brands and retailers. With millions of users and more than 300,000 sellers, intro Festo is the online introping site for Internet users across the country, delivering to 6000+ cities and towns in India. In its journey till now, intro Festo has partnered with several global marquee investors and individuals such as SoftBank, BlackRock, Temasek, Foxconn, Alibaba, eBay Inc., Premji Invest, Intel Capital, Bessemer Venture Partners, Mr. Ratan Tata, among others. Online introping – A Boon The trend of online introping is becoming a household name and so is intro Festo. intro Festo is the preferred choice of hundreds of thousands of online intropers given its mammoth assortment of 15 million+ products, quick delivery even to the remotest corners of the country, and daily deals, discounts & offers to make products available at slashed down prices to our valuable customers.
+                </p>
+                <div class="bo13 p-l-29 m-l-9 p-b-10 mb-5">
+                    <p class="p-b-11">
+                        intro on the Go – Install intro Festo App Today! You can intro for your favourite products at intro Festo even on the go using intro Festo App. Available for both Android and Apple users, the app can be downloaded from Google Play Store and Apple App Store respectively.
+                    </p>
+                    <span class="s-text5">
+                        - Steve Job’s
+                    </span>
+                </div>
+                <div class="size9">
+                    <!-- Button -->
+                    <a href="/courses/computer_science/c/tutorials"><button class="my-3 flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+                        Tutorials
+                    </button></a>
+                    <a href="/courses/computer_science/c/examples"><button class="m-3 flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+                        Examples
+                    </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="{%static 'intro/js/basic_cart.js' %}"></script>
+<script>
+$('#pop_dropdown').hide();
+</script>
+{% endblock %}
