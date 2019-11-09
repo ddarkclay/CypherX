@@ -1,5 +1,5 @@
 {% extends 'intro/basic.html' %}
-{% block title %} intro Festo {% endblock %}
+{% block title %} Shop Festo {% endblock %}
 {% block body %}
 {% load static %}
 <!-- Title Page -->
@@ -33,36 +33,17 @@
                 Submit
             </button> 
         </form>
-        <!-- Modal -->
-        <!-- <div class="modal fade" id="mymodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Contact Success</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Thank for Contact Us. We Connect you as soon as Possible.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Ok</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </div>
 </section>
 {% endblock %}
 
 {% block js %}
-<script type="text/javascript" src="{%static 'intro/js/basic_cart.js' %}"></script>
+<script type="text/javascript" src="{%static 'shop/js/basic_cart.js' %}"></script>
 <script>
 $('#pop_dropdown').hide();
 {% if thanks %}
     alert('Thank for Contact Us. We Connect you as soon as Possible');
-    document.location = "/intro/contact";
+    document.location = "/shop/contact";
     // $('#submit_btn').click();
 {% endif %}
 </script>

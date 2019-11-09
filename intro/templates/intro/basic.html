@@ -166,51 +166,52 @@
                             <li class="sale-noti">
                                 <a href="/courses">Courses</a>
                                 <ul class="sub_menu">
-                                    <li><a href="/courses/computer_science">Computer Science</a>
+                                    {% for i in cats %}
+                                    <li><a href="/courses/{{i}}">{{i}}</a>
                                         <ul class="sub_menu">
-                                            <li><a href="/courses/computer_science/c">C</a>
+                                            <li><a href="/courses/{{i}}/C">C</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/c/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/c/examples">Examples</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/courses/computer_science/c++">C++</a>
+                                            <li><a href="/courses/{{i}}/C++">C++</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/cpp/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/cpp/examples">Examples</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/courses/computer_science/java">JAVA</a>
+                                            <li><a href="/courses/{{i}}/Java">JAVA</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/java/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/java/examples">Examples</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/courses/computer_science/python">PYTHON</a>
+                                            <li><a href="/courses/{{i}}/Python">PYTHON</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/python/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/python/examples">Examples</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/courses/computer_science/vb.net">VB.NET</a>
+                                            <li><a href="/courses/{{i}}/Vb.net">VB.NET</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/vb.net/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/vb.net/examples">Examples</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/courses/c_sharp">C#</a>
+                                            <li><a href="/courses/{{i}}/C_sharp">C#</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/c#/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/c#/examples">Examples</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/courses/computer_science/asp.net">ASP.NET</a>
+                                            <li><a href="/courses/{{i}}/Asp.net">ASP.NET</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/asp.net/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/asp.net/examples">Examples</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/courses/computer_science/oracle">ORACLE</a>
+                                            <li><a href="/courses/{{i}}/Oracle">ORACLE</a>
                                                 <ul class="sub_menu">
                                                     <li><a href="/courses/computer_science/oracle/tutorials">Tutorials</a></li>
                                                     <li><a href="/courses/computer_science/oracle/examples">Examples</a></li>
@@ -218,56 +219,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="/courses/fine_arts">Fine Arts</a>
-                                        <ul class="sub_menu">
-                                            <li><a href="/courses/fine_arts/2d_animation">2D Animation</a>
-                                                <ul class="sub_menu">
-                                                    <li><a href="/courses/computer_science/2d_animation/tutorials">Tutorials</a></li>
-                                                    <li><a href="/courses/computer_science/2d_animation/examples">Examples</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="/courses/fine_arts/3d_animation">3D Animation</a>
-                                                <ul class="sub_menu">
-                                                    <li><a href="/courses/computer_science/3d_animation/tutorials">Tutorials</a></li>
-                                                    <li><a href="/courses/computer_science/3d_animation/examples">Examples</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="/courses/mass_media">Mass Media</a>
-                                        <ul class="sub_menu">
-                                            <li><a href="">Tutorials</a></li>
-                                            <li><a href="">Examples</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="/courses/hotel_management">Hotel Management</a>
-                                        <ul class="sub_menu">
-                                            <li><a href="/shop/sale">House Keeping</a>
-                                                <ul class="sub_menu">
-                                                    <li><a href="">Tutorials</a></li>
-                                                    <li><a href="">Examples</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="/shop/sale">Food Production</a>
-                                                <ul class="sub_menu">
-                                                    <li><a href="">Tutorials</a></li>
-                                                    <li><a href="">Examples</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="/shop/sale">Front Office</a>
-                                                <ul class="sub_menu">
-                                                    <li><return render(requests, 'courses/index.html')a href="">Tutorials</a></li>
-                                                    <li><a href="">Examples</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="/shop/sale">Food & Beverage</a>
-                                                <ul class="sub_menu">
-                                                    <li><a href="">Tutorials</a></li>
-                                                    <li><a href="">Examples</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    {% endfor %}
                                 </ul>
                             </li>
                             <li>
@@ -277,7 +229,7 @@
                                 <a href="/shop/about">About Us</a>
                             </li>
                             <li>
-                                <a href="/shop/contact">Contact</a>
+                                <a href="/intro/contact">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -322,15 +274,10 @@
                                 <hr>
                                 <b>Your Email</b>
                                 <h6>{{user.email}}</h6>
-                                <!-- <a href="{% url 'Logout' %}">
-                                    <div class="d-flex justify-content-center mt-3 login_container">
-                                        <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 py-2 my-2 cart">Log Out</button>
-                                    </div>
-                                </a> -->
                                 <div class="header-cart-buttons mt-4">
                                     <div class="header-cart-wrapbtn">
                                         <!-- Button -->
-                                        <a href="{%url 'Logout'%}"><button class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                        <a href="#"><button class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                                                 Logout
                                             </button></a>
                                     </div>
@@ -446,15 +393,10 @@
                                 <hr>
                                 <b>Your Email</b>
                                 <h6>{{user.email}}</h6>
-                                <!-- <a href="{% url 'Logout' %}">
-                                    <div class="d-flex justify-content-center mt-3 login_container">
-                                        <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 py-2 my-2 cart">Log Out</button>
-                                    </div>
-                                </a> -->
                                 <div class="header-cart-buttons mt-4">
                                     <div class="header-cart-wrapbtn">
                                         <!-- Button -->
-                                        <a href="{%url 'Logout'%}"><button class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                        <a href=""><button class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                                                 Logout
                                             </button></a>
                                     </div>
@@ -770,19 +712,6 @@
     <!--===============================================================================================-->
     <script type="text/javascript" src="{%static 'intro/vendor/sweetalert/sweetalert.min.js' %}"></script>
     <script type="text/javascript">
-    $('.block2-btn-addcart').each(function() {
-        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $(this).on('click', function() {
-            swal(nameProduct, "is added to cart !", "success");
-        });
-    });
-
-    $('.block2-btn-addwishlist').each(function() {
-        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $(this).on('click', function() {
-            swal(nameProduct, "is added to wishlist !", "success");
-        });
-    });
     $('#search_btn').click(function() {
         $('#search').focus();
     });

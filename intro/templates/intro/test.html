@@ -1,0 +1,38 @@
+<li class="sale-noti">
+                                <a href="/courses">Courses</a>
+                                <ul class="sub_menu">
+                                    {% for cats, category_by_course in allinfo %}
+                                    <li><a href="/courses/{{i}}">{{cats|slice:''}}</a>
+                                        <ul class="sub_menu">
+                                            <li><a href="/courses/computer_science/c">{{category_by_info}}</a>
+                                                <ul class="sub_menu">
+                                                    <li><a href="/courses/computer_science/c/tutorials">Tutorials</a></li>
+                                                    <li><a href="/courses/computer_science/c/examples">Examples</a></li>
+                                                </ul>
+                                            </li>
+
+
+
+
+
+
+
+
+
+
+
+                                            def index(requests):
+    allinfo = []
+    allcourses = Course.objects.all()
+    catcourse = Course.objects.values('category')
+    cats = {item['category'] for item in catcourse}
+    cats = list(cats)
+    print(cats.sort())
+    category_by_course = []
+    for cat in cats:
+        cat_by_course = Course.objects.filter(category=cat)
+        category_by_course.append(cat_by_course)
+    allinfo.append([cats,category_by_course])
+    print(allinfo)
+    params = {'allcourses': allcourses, 'allinfo':allinfo}
+    return render(requests, 'intro/index.html', params)
